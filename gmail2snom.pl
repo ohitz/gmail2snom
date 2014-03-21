@@ -121,7 +121,7 @@ while (my $row = $csv_in->getline_hr($fh_in)) {
 
     if (0 < scalar(keys %{ $numbers })) {
       foreach my $type (keys %{ $numbers }) {
-	$csv_out->combine($type,
+	$csv_out->combine($name." - ".$type,
 			  $numbers->{$type},
 			  "sip",
 			  "active",
